@@ -18,6 +18,8 @@ class AutoRecon2Obsidian:
         self.obsidian_vault_dir = self.arguments.obsidian_dir
         self.challenge_platform = self.arguments.platform
         self.target_name = self.arguments.name
+        self.whatportis_host = self.arguments.host
+        self.whatportis_port = self.arguments.port
 
     def parse_arguments(self):
         parser = argparse.ArgumentParser(
@@ -26,10 +28,11 @@ class AutoRecon2Obsidian:
             epilog='Examples: autorecon2obsidian /path/to/your/results/directory /path/to/your/obsidian/vault/directory',
         )
 
-        parser.add_argument('autorecon_dir', help='Path to the directory containing your autorecon results')
-        parser.add_argument('obsidian_dir', help='Path to the directory containing your obsidian vault')
+        parser.add_argument('autorecon_dir', help='Path to the directory containing your autorecon "results" directory')
+        parser.add_argument('obsidian_dir', help='Path to the root directory of your obsidian vault')
         parser.add_argument('--platform', choices=['HTB', 'PG', 'PEN200'], default='HTB', help='Challenge platform')
-        parser.add_argument('--name', required=True, help='Machine Name')
+        parser.add_argument('--host', default='127.0.0.1', help='whatportis host')
+        parser.add_argument('--port', required=True, help='whatportis port')
         return parser.parse_args()
 
     def gather_autorecon_report_data(self):
@@ -299,7 +302,7 @@ class AutoRecon2Obsidian:
         return report_files
     def _get_service_name(self, port_dir):
         port = port_dir.name.replace('tcp', '').replace('udp', '')
-        response = requests.get(f"http://127.0.0.1:9090/ports/{port}")
+        response = requests.get(f"http://{self.whatportis_host}:{self.whatportis_port}/ports/{port}")
         if response.status_code == 200:
             response_json = json.loads(response.text)
             if len(response_json['ports']) == 0:
