@@ -372,7 +372,6 @@ status: unprocessed
 ---
 """
             autorecon_reports = current_port["autorecon_reports"]
-            print(len(autorecon_reports))
             ctr = 0
             command_notes = []
             while ctr < len(autorecon_reports):
@@ -437,7 +436,6 @@ status: unprocessed
 ---
 """
             autorecon_reports = current_port["autorecon_reports"]
-            print(len(autorecon_reports))
             ctr = 0
             command_notes = []
             while ctr < len(autorecon_reports):
