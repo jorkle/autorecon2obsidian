@@ -17,19 +17,19 @@ Designed to be used with the **Obsidian vault template**, [https://github.com/Ha
 4. The machines name must be specified with the "--name" parameter.
 5. the "whatportis" host and port must be specified with "--host" and "--port"
 
-![https://i.imgur.com/hp6YmFZ.png]
+![](https://i.imgur.com/hp6YmFZ.png)
 
 
 ### Note Generation (All Automatically Generated from the Autorecon output)
 
-!()[https://i.imgur.com/FHS7m5b.png]
+![](https://i.imgur.com/FHS7m5b.png)
 
-![https://i.imgur.com/nbPbRDc.png]
+![](https://i.imgur.com/nbPbRDc.png)
 
-![https://i.imgur.com/ncJQtfK.png]
+![](https://i.imgur.com/ncJQtfK.png)
 
-![https://i.imgur.com/b2oLCo5.png]
+![](https://i.imgur.com/b2oLCo5.png)
 
-![https://i.imgur.com/hINL41o.png]
+![](https://i.imgur.com/hINL41o.png)
 
 ![https://i.imgur.com/Br6WBOl.png]
