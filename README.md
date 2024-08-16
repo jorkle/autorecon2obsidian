@@ -32,4 +32,4 @@ Designed to be used with the **Obsidian vault template**, [https://github.com/Ha
 
 ![](https://i.imgur.com/hINL41o.png)
 
-![https://i.imgur.com/Br6WBOl.png]
+![](https://i.imgur.com/Br6WBOl.png)
